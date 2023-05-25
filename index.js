@@ -1,6 +1,6 @@
 const express = require("express");
-const hbs = require("hbs");
-const routes = require("./routes/index.js");
+//const hbs = require("hbs");
+const routes = require("./routes/index");
 
 const app = express();
 
