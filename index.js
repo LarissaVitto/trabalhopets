@@ -1,11 +1,16 @@
 const express = require("express");
-//const hbs = require("hbs");
+const hbs = require("hbs");
 const routes = require("./routes/index");
 
 const app = express();
 
 app.use(express.json());
 
+hbs.registerPartials(`${__dirname}/views`);
+app.set("view engine","hbs");
+app.set("view options",{
+    layout:"layouts/default"
+})
 app.use(express.static("public"));
 
 app.use(routes);
@@ -16,3 +21,4 @@ app.listen(8080, (error) => {
   }
   console.log("Servidor rodando na porta 8080!");
 });
+

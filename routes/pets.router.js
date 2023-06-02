@@ -3,6 +3,6 @@ const petsController = require("../controller/pets.controller");
 
 const routes = new express.Router();
 
-routes.get("/", petsController.retorna);
+routes.get("/", petsController.find);
 
 module.exports = routes;
